@@ -65,7 +65,7 @@ void SpaceLoop_System(FlecsUnit& fu)
 	float maxPosY = 9000;
 	float maxPosZ = 2000;
 	FVector newPos = LoopPosCal(fu.Pos.GetLocation(), maxPosX, maxPosY, maxPosZ);
-	fu.Pos = FTransform(FRotator::ZeroRotator, newPos);
+	fu.Pos.SetLocation(newPos);
 }
 
 void Beam_System(flecs::iter& it, size_t i, FlecsUnit& fu, FlecsHealth& fh, FlecsBeamTransform& fbt)
