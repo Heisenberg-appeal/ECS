@@ -16,9 +16,9 @@ AISMController::AISMController()
 void AISMController::Initialize(UStaticMesh* InMesh) const
 {
 	InstancedStaticMeshComponent->SetStaticMesh(InMesh);
-	InstancedStaticMeshComponent->CastShadow = false;
-	InstancedStaticMeshComponent->bCastDynamicShadow = false;
-	InstancedStaticMeshComponent->bCastStaticShadow = false;
+	InstancedStaticMeshComponent->CastShadow = true;
+	InstancedStaticMeshComponent->bCastDynamicShadow = true;
+	InstancedStaticMeshComponent->bCastStaticShadow = true;
 	InstancedStaticMeshComponent->bUseDefaultCollision = false;
 	InstancedStaticMeshComponent->SetGenerateOverlapEvents(false);
 	InstancedStaticMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
